@@ -32,7 +32,7 @@ directCommands:
     summary: The secondary availability zone for the private cloud.
     description: ''
   - name: --strategy
-    summary: The availability strategy for the private cloud.
+    summary: 'The availability strategy for the private cloud. Possible values include: "SingleZone", "DualZone".'
     description: ''
   - name: --zone
     summary: The primary availability zone for the private cloud.
@@ -129,7 +129,7 @@ directCommands:
     summary: Secondary server URL.
     description: ''
   - name: --ssl
-    defaultValue: Disabled
+    defaultValue: "Disabled"
     summary: Protect LDAP communication using SSL certificate (LDAPS). Specify "Enabled" or "Disabled".
     description: ''
 - uid: az_vmware_private-cloud_add-identity-source
@@ -195,7 +195,7 @@ directCommands:
     summary: Secondary server URL.
     description: ''
   - name: --ssl
-    defaultValue: Disabled
+    defaultValue: "Disabled"
     summary: Protect LDAP communication using SSL certificate (LDAPS). Specify "Enabled" or "Disabled".
     description: ''
 - uid: az_vmware_private-cloud_create
@@ -239,6 +239,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --accept-eula
+    defaultValue: "False"
     summary: Accept the end-user license agreement without prompting.
     description: ''
   - name: --internet
@@ -248,6 +249,7 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --mi-system-assigned
+    defaultValue: "False"
     summary: Enable a system assigned identity.
     description: ''
   - name: --nsxt-password
@@ -260,6 +262,7 @@ directCommands:
     summary: VCenter admin password.
     description: ''
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_delete
@@ -281,6 +284,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_delete-availability-zone
@@ -302,6 +306,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_delete-cmk-encryption
@@ -323,6 +328,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_deleteidentitysource
@@ -359,6 +365,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_delete-identity-source
@@ -395,6 +402,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_disable-cmk-encryption
@@ -416,6 +424,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_enable-cmk-encryption
@@ -518,6 +527,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_private-cloud_show
@@ -597,8 +607,8 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
-  parameterValueGroup: json, jsonc, table, tsv
+  defaultValue: "json"
+  parameterValueGroup: "json, jsonc, table, tsv"
   summary: Output format.
 - name: --query
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
